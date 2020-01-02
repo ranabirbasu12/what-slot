@@ -10,7 +10,7 @@ Currently hosted at [https://whatslot.metakgp.org/](https://whatslot.metakgp.org
 
 NOTE: The `master` branch is automatically deployed as an heroku app on the above link.
 ## Updating for new semester
-0. Set the environment variable `JSESSIONID` to the cookie of same name by `export JSESSIONID=<session ID>`. The `JSESSIONID` cookie is generated when you visit the academic section in ERP while you are logged in. This can be grabbed from the network requests in your chrome debugger.
+0. Set the environment variable `JSESSIONID` to the cookie of same name by `export JSESSIONID=<session ID>`. The `JSESSIONID` cookie is generated when you visit the academic section in ERP while you are logged in. This can be grabbed from the network requests in your chrome debugger, just open network tab in it and click on academic, then see the request for cookies and copy JSESSIONID.
 0. Update `for_session` and `for_semester` (line no. 10 and 11) in `fetch.py`.
 0. Run `JSESSIONID=[JSESSIONID TAKEN FROM CHROME] python3 fetch.py`, and if all went well you should see a list of subjects being fetched for each department (please install dependencies before this step from requirements.txt or Pipenv). Note that no square brackets should be there in the actual command around JSESSION grabbed from chrome.
 0. After script has finished executing, the app is ready to be deployed once again for the new semester.
