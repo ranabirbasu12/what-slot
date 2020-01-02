@@ -9,7 +9,10 @@ Organize your time table for additional courses and minor.
 Currently hosted at [https://whatslot.metakgp.org/](https://whatslot.metakgp.org/)
 
 NOTE: The `master` branch is automatically deployed as an heroku app on the above link.
-
+## Updating for new semester
+1. Set the environment variable `JSESSIONID` to the cookie of same name by `export JSESSIONID=<session ID>`. The `JSESSIONID` cookie is generated when you visit the academic section in ERP while you are logged in.
+2. Run `python3 fetch.py`, and if all went well you should see a list of subjects being fetched for each department. 
+3. After script has finished executing, the app is ready to be deployed once again for the new semester.
 ## Runnning locally
 1. `git clone https://github.com/arnav-t/what-slot.git`
 2. `cd what-slot`
