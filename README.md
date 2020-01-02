@@ -6,7 +6,10 @@
      
 Organize your time table for additional courses and minor.
 ## Usage
-Currently hosted at [https://what-slot-kgp.herokuapp.com/](https://what-slot-kgp.herokuapp.com/)
+Currently hosted at [https://whatslot.metakgp.org/](https://whatslot.metakgp.org/)
+
+NOTE: The `master` branch is automatically deployed as an heroku app on the above link.
+
 ## Runnning locally
 1. `git clone https://github.com/arnav-t/what-slot.git`
 2. `cd what-slot`
