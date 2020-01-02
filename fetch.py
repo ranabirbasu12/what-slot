@@ -9,7 +9,7 @@ headers = {
 }
 form = {
 	'for_session': '2019-2020',
-	'for_semester': 'AUTUMN',
+	'for_semester': 'SPRING',
 	'dept': '{}'
 }
 dataFileName = 'courses.json'
@@ -18,6 +18,7 @@ depFileName = 'deps.txt'
 def getData(dep):
 	global form 
 	form['dept'] = dep
+	print(f'getting courses for {dep}')
 	response = requests.post(url.format(dep), headers=headers, data=form)
 
 	courses = []
@@ -56,10 +57,11 @@ def getData(dep):
 
 if __name__ == '__main__':
 	deps = []
+	print('loading deps...')
 	with open(depFileName, 'r') as depFile:
 		for dep in depFile:
 			deps.append(dep[:2])
-
+	print('loading courses...')
 	courses = []
 	for dep in deps:
 		courses.extend( getData(dep) )
